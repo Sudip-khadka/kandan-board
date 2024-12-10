@@ -1,4 +1,15 @@
 # React + TypeScript + Vite
+# How to Setup This Project
+## git clone https://github.com/Sudip-khadka/kandan-board.git
+## cd kandan-board
+## npm install
+your project setup must be ready 
+## This project uses React DnD for handling drang and drop  as react-beautiful-dnd is depreciated
+![Screenshot 2024-12-10 135204](https://github.com/user-attachments/assets/c0d35992-de14-451e-b43d-15cfad5bd112)
+
+## Check live site at :-https://kandan-boards.netlify.app/
+![Screenshot (25)](https://github.com/user-attachments/assets/f7b1065d-b29b-4ee5-a576-9ecffc1b9f3a)
+![Screenshot (24)](https://github.com/user-attachments/assets/35b444b4-087e-4625-8314-fc3ea7a3171b)
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
