@@ -1,19 +1,24 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import Column from '../components/Column';
 import { DndContext } from '@dnd-kit/core';
 
+// Define the type for columns state
+type Columns = {
+  [key: string]: string[]; // Each column will be a key (string) and its value will be an array of strings (tasks)
+};
+
 const Board = () => {
   // Initialize columns state from localStorage or fallback to default data
-  const loadColumnsFromLocalStorage = () => {
+  const loadColumnsFromLocalStorage = (): Columns => {
     const storedColumns = localStorage.getItem('columns');
     return storedColumns ? JSON.parse(storedColumns) : {
-      todo: ['Switch from JS to TS', 'Build Kanban Board',"Add editing and deleting Feature","Learn Test Writing"],
+      todo: ['Switch from JS to TS', 'Build Kanban Board', 'Add editing and deleting Feature', 'Learn Test Writing'],
       'in-progress': ['Learn Typescript'],
-      done: ['Setup Project',"Basic Drag & Drop Demo"],
+      done: ['Setup Project', 'Basic Drag & Drop Demo'],
     };
   };
 
-  const [columns, setColumns] = useState(loadColumnsFromLocalStorage);
+  const [columns, setColumns] = useState<Columns>(loadColumnsFromLocalStorage);
 
   // Update localStorage whenever columns state changes
   useEffect(() => {
